@@ -5,7 +5,7 @@ It may happen that processes in the ready queue can be divided into different cl
 
 **Ready Queue** is divided into separate queues for each class of processes. For example, let us take three different types of process System processes, Interactive processes and Batch Processes. All three process have there own queue. Now,look at the below figure.
 
-![Image alt](1.jpg)
+![Image alt](https://github.com/VovaMaybeNextTime/Lab3OS/blob/main/res/1.jpg)
 
 All three different type of processes have there own queue. Each queue have its own Scheduling algorithm. For example, queue 1 and queue 2 uses **Round Robin** while queue 3 can use **FCFS** to schedule there processes.
 
@@ -22,9 +22,15 @@ All three different type of processes have there own queue. Each queue have its 
 **Example Problem** : 
 Consider below table of four processes under Multilevel queue scheduling.Queue number denotes the queue of the process.
 
+![Image alt](https://github.com/VovaMaybeNextTime/Lab3OS/blob/main/res/2.jpg)
+
 Priority of queue 1 is greater than queue 2. queue 1 uses Round Robin (Time Quantum = 2) and queue 2 uses FCFS. 
 
 Below is the **gantt chart** of the problem :
+
+
+![Image alt](https://github.com/VovaMaybeNextTime/Lab3OS/blob/main/res/3.jpg)
+
 At starting both queues have process so process in queue 1 (P1, P2) runs first (because of higher priority) in the round robin fashion and completes after 7 units then process in queue 2 (P3) starts running (as there is no process in queue 1) but while it is running P4 comes in queue 1 and interrupts P3 and start running for 5 second and after its completion P3 takes the CPU and completes its execution. 
 
 **Advantages**:
