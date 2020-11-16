@@ -44,7 +44,8 @@ At starting both queues have process so process in queue 1 (P1, P2) runs first (
 
 ## Process structure
 
-struct process { 
+**struct process** {
+
     int priority;
     
     int burst_time;
@@ -52,5 +53,6 @@ struct process {
     int tt_time;
     
     int total_time = 0;
+
 };
 
