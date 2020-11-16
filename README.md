@@ -13,7 +13,9 @@ All three different type of processes have there own queue. Each queue have its 
  
 
 **1) Fixed priority preemptive scheduling method** – Each queue has absolute priority over lower priority queue. Let us consider following priority order queue 1 > queue 2 > queue 3.According to this algorithm no process in the batch queue(queue 3) can run unless queue 1 and 2 are empty. If any batch process (queue 3) is running and any system (queue 1) or Interactive process(queue 2) entered the ready queue the batch process is preempted.
+
 **2) Time slicing** – In this method each queue gets certain portion of CPU time and can use it to schedule its own processes.For instance, queue 1 takes 50 percent of CPU time queue 2 takes 30 percent and queue 3 gets 20 percent of CPU time.
+
 **Example Problem** : 
 Consider below table of four processes under Multilevel queue scheduling.Queue number denotes the queue of the process.
 
@@ -25,6 +27,7 @@ At starting both queues have process so process in queue 1 (P1, P2) runs first (
 **Advantages**:
 
 1)The processes are permanently assigned to the queue, so it has advantage of low scheduling overhead.
+
 **Disadvantages**:
 
 1)Some processes may starve for CPU if some higher priority queues are never becoming empty.
