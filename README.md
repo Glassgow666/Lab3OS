@@ -56,3 +56,20 @@ At starting both queues have process so process in queue 1 (P1, P2) runs first (
 
 };
 
+## Queues structure
+
+**struct queues** {
+
+    int priority_start;
+    
+    int priority_end;
+    
+    int total_time = 0;
+    
+    int length = 0;
+    
+    process* p;
+    
+    bool executed = false;
+    
+};
