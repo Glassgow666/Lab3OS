@@ -1,6 +1,47 @@
 # Lab3OS MULTILEVEL QUEUE SCHEDULING - MQS
 ## DESCRIPTION
 ## About MQS
+
+**Multiple-level queues** are not an independent scheduling algorithm. They make use of other existing algorithms to group and schedule jobs with common characteristics.
+
+1) Multiple queues are maintained for processes with common characteristics.
+
+2) Each queue can have its own scheduling algorithms.
+
+3) Priorities are assigned to each queue.
+
+**First Come First Serve (FCFS)**
+
+1) Jobs are executed on first come, first serve basis.
+
+2) It is a non-preemptive, pre-emptive scheduling algorithm.
+
+3) Easy to understand and implement.
+
+4) Its implementation is based on FIFO queue.
+
+5) Poor in performance as average wait time is high.
+
+**Priority Based Scheduling**
+
+1) Priority scheduling is a non-preemptive algorithm and one of the most common scheduling algorithms in batch systems.
+
+2) Each process is assigned a priority. Process with highest priority is to be executed first and so on.
+
+3) Processes with same priority are executed on first come first served basis.
+
+4) Priority can be decided based on memory requirements, time requirements or any other resource requirement.
+
+**Round Robin Scheduling**
+
+1) Round Robin is the preemptive process scheduling algorithm.
+
+2) Each process is provided a fix time to execute, it is called a quantum.
+
+3) Once a process is executed for a given time period, it is preempted and other process executes for a given time period.
+
+4) Context switching is used to save states of preempted processes.
+
 It may happen that processes in the ready queue can be divided into different classes where each class has its own scheduling needs. For example, a common division is a **foreground (interactive)** process and **background (batch)** processes.These two classes have different scheduling needs. For this kind of situation Multilevel Queue Scheduling is used.Now, let us see how it works. 
 
 **Ready Queue** is divided into separate queues for each class of processes. For example, let us take three different types of process System processes, Interactive processes and Batch Processes. All three process have there own queue. Now,look at the below figure.
