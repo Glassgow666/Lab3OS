@@ -74,6 +74,96 @@ At starting both queues have process so process in queue 1 (P1, P2) runs first (
     
 };
 
+## Functions
+
+**bool notComplete(queues q[])** {
+
+    bool a = false;
+    
+    int countInc = 0;
+    
+    for (int i = 0; i < 3; i++) {
+    
+        countInc = 0;
+        
+        for (int j = 0; j < q[i].length; j++) {
+        
+            if (q[i].p[j].burst_time != 0) {
+            
+                a = true;
+                
+            }
+            
+            else {
+            
+                countInc += 1;
+                
+            }
+            
+        }
+        
+        if (countInc == q[i].length) {
+        
+
+            q[i].executed = true;
+            
+        }
+        
+    }
+    
+    return a;
+    
+}
+
+**void sort_ps(queues q)** {
+
+    for (int i = 1; i < q.length; i++) {
+    
+        for (int j = 0; j < q.length - 1; j++) {
+        
+            if (q.p[j].priority < q.p[j + 1].priority) {
+            
+                process temp = q.p[j + 1];
+                
+                q.p[j + 1] = q.p[j];
+                
+                q.p[j] = temp;
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+**void checkCompleteTimer(queues q[])** {
+
+    bool a = notComplete(q);
+    
+    for (int i = 0; i < 3; i++) {
+    
+        if (q[i].executed == false) {
+        
+            for (int j = 0; j < q[i].length; j++) {
+            
+                if (q[i].p[j].burst_time != 0) {
+                
+                    q[i].p[j].total_time += 1;
+                    
+                }
+                
+            }
+            
+            q[i].total_time += 1;
+            
+        }
+        
+    }
+    
+}
+
+
 ## Сonclusion
 
 It is queue scheduling algorithm in which ready queue is partitioned into several smaller queues and processes are assigned permanently into these queues. The processes are divided on basis of their intrinsic characterstics such as memory size, priority etc.
