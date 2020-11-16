@@ -41,3 +41,12 @@ At starting both queues have process so process in queue 1 (P1, P2) runs first (
 
 1)Some processes may starve for CPU if some higher priority queues are never becoming empty.
 2)It is inflexible in nature.
+
+## Process structure
+
+struct process {
+    int priority;
+    int burst_time;
+    int tt_time;
+    int total_time = 0;
+};
