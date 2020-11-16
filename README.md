@@ -73,3 +73,15 @@ At starting both queues have process so process in queue 1 (P1, P2) runs first (
     bool executed = false;
     
 };
+
+## Сonclusion
+
+It is queue scheduling algorithm in which ready queue is partitioned into several smaller queues and processes are assigned permanently into these queues. The processes are divided on basis of their intrinsic characterstics such as memory size, priority etc.
+
+In this algorithm queue are classified into two groups, first containing background processes and second containing foreground processes.
+80% CPU time is given to foreground queue using Round Robin Algorithm and 20% time is given to background processes using First Come First Serve Algorithm.
+
+The priority is fixed in this algorithm. When all processes in one queue get executed completely then only processes in other queue are executed.
+Thus, starvation can occur.
+
+Since, processes do not move between queues, it has low scheduling overhead and is inflexible.
