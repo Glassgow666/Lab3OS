@@ -216,3 +216,8 @@ The priority is fixed in this algorithm. When all processes in one queue get exe
 Thus, starvation can occur.
 
 Since, processes do not move between queues, it has low scheduling overhead and is inflexible.
+
+
+## Graphics
+
+![Image alt](https://github.com/VovaMaybeNextTime/Lab3OS/blob/main/res/Graphics.png)
